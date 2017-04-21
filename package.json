@@ -1,0 +1,19 @@
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "Misc. Javascript functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kshowalter/functions.git"
+  },
+  "author": "Keith Showalter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kshowalter/functions/issues"
+  },
+  "homepage": "https://github.com/kshowalter/functions#readme"
+}
