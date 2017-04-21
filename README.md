@@ -1,0 +1,2 @@
+# functions
+Misc Javascript functions
