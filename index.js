@@ -324,7 +324,10 @@ f.split_long_sentence = function(string, length){
 };
 
 
+f.range(num) {
+  return Array.apply(null, Array(num)).map(function ($, i) {return i;});
 
+}
 
 
 //module.exports = f;
