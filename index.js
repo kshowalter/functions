@@ -328,6 +328,24 @@ f.range = function(num) {
   return Array.apply(null, Array(num)).map(function ($, i) {return i;});
 };
 
+f.mk_range_measurment = function(){
+  var range = [];
+
+  var check = function(value){
+    range[0] = range[0] || value;
+    range[1] = range[1] || value;
+    if( value < range[0] ){
+      range[0] = value;
+    }
+    if( value > range[1] ){
+      range[1] = value;
+    }
+    return range;
+  };
+
+  return check;
+};
+
 
 module.exports = f;
 //export default f;
