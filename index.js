@@ -330,6 +330,12 @@ f.split_long_sentence = function(string, length){
   return lines;
 };
 
+f.get_max_of_array = function(num_array) {
+  return Math.max.apply(null, num_array);
+};
+f.get_min_of_array = function(num_array) {
+  return Math.min.apply(null, num_array);
+};
 
 f.range = function(num) {
   return Array.apply(null, Array(num)).map(function ($, i) {return i;});
