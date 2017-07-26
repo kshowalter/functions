@@ -293,10 +293,17 @@ f.mk_ready_count = function(total_count, callback){
   var data_collection = {};
   var ready = false;
 
-  return function(data){
+  return function(data, err){
     count++;
-    if(data){
-      data_collection[count] = data;
+    if( data === false ){
+      logger.info('failure state');
+      callback(false);
+    }
+    if( data || err ){
+      data_collection[count] = {
+        data: data,
+        err: err
+      };
     }
     if( count < total_count ){
       return false;
