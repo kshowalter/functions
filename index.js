@@ -359,6 +359,21 @@ f.mk_range_measurment = function(){
   return check;
 };
 
+f.format_milliseconds = function(milliseconds_number){
+  var seconds_number = milliseconds_number/1000;
+  var days    = Math.floor( seconds_number / (3600*24) )
+  var hours   = Math.floor( ( seconds_number - (days*(3600*24))                          ) / 3600 );
+  var minutes = Math.floor( ( seconds_number - (days*(3600*24)) - (hours * 3600)         ) / 60   );
+  var seconds = seconds_number - (days*(3600*24)) - (hours * 3600) - (minutes * 60);
+  var seconds = Math.floor( seconds*1000 )/1000;
+
+  if (days    < 10) {days    = '0'+days;}
+  if (hours   < 10) {hours   = '0'+hours;}
+  if (minutes < 10) {minutes = '0'+minutes;}
+  if (seconds < 10) {seconds = '0'+seconds;}
+
+  return days+'d '+hours+'h '+minutes+'m '+seconds+'s';
+}
 
 module.exports = f;
 //export default f;
