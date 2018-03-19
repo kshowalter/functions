@@ -214,7 +214,9 @@ f.format_value = function(value_in){
 f.display_value = function(value_in){
   var value_out = f.format_value(value_in);
 
-  if( value_out === false || isNaN(value_out) ){
+  if( value_out.constructor === String ){
+    value_out = value_out;
+  } else if( value_out === false || isNaN(value_out) ){
     value_out = '';
   }
 
