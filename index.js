@@ -210,6 +210,17 @@ f.format_value = function(value_in){
   return value_out;
 };
 
+
+f.display_value = function(value_in){
+  var value_out = f.format_value(value_in);
+
+  if( value_out === false ){
+    value_out = '';
+  }
+
+  return value_out;
+};
+
 f.lowercase_properties = function lowercase_properties(obj) {
   var new_object = new obj.constructor();
   for( var old_name in obj ){
