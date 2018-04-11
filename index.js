@@ -388,5 +388,23 @@ f.format_milliseconds = function(milliseconds_number){
   return days+'d '+hours+'h '+minutes+'m '+seconds+'s';
 }
 
+f.split_string_by_length = function(str,length){
+  if(str.length < length ){
+    return [str];
+  } else {
+    var str_array = [];
+    while(str.length > length){
+      var i = length;
+      while( str.length > i && str[i] !== ' ' ){
+        i--;
+      }
+      str_array.push(str.slice(0,i));
+      str = str.slice(i+1);
+    }
+    return str_array;
+  }
+
+}
+
 module.exports = f;
 //export default f;
