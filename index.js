@@ -401,6 +401,7 @@ f.split_string_by_length = function(str,length){
       str_array.push(str.slice(0,i));
       str = str.slice(i+1);
     }
+    str_array.push(str);
     return str_array;
   }
 
