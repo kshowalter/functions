@@ -140,6 +140,7 @@ f.nan_check = function nan_check(object, path){
 };
 
 f.str_to_num = function str_to_num(input){
+  if(input==='') return input;
   var output;
   if(!isNaN(input)) output = Number(input);
   else output = input;
